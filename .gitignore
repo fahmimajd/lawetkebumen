@@ -1,3 +1,4 @@
 **/.env
 **/.env.*
 !**/.env.example
+apps/wa-gateway-node/storage/wa-auth/
