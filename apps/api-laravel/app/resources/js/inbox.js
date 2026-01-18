@@ -113,7 +113,9 @@ if (!appRoot || !conversationListEl || !messagesEl || !composerForm || !composer
   const formatTime = (iso) => {
     if (!iso) return "";
     const date = new Date(iso);
-    return date.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+    const day = date.toLocaleDateString(undefined, { weekday: "short" });
+    const time = date.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+    return `${day} ${time}`;
   };
 
   const formatAssigneeLabel = (conversation) => {
